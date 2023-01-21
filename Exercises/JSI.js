@@ -1,6 +1,6 @@
 /* Longest Common Prefix
 
-Escriba una función para encontrar la cadena de prefijo común más larga entre una matriz de cadenas.
+//Escriba una función para encontrar la cadena de prefijo común más larga entre una matriz de cadenas.
 Si no hay un prefijo común, devuelve un string  vacío "".
 
  Example 1:
@@ -22,7 +22,21 @@ Restricciones:
 
 function longestCommonPrefix(strs){
     // Tu código aca:
-    
+    if (strs.length === 0) {
+        return "No hay un prefijo común entre la entrada strings.";
+      }
+      if (strs.length === 1) {
+        return strs[0];
+      }
+      strs.sort();
+      var first = strs[0];
+      var last = strs[strs.length - 1];
+      for (var i = 0; i < first.length; i++) {
+        if (first[i] !== last[i]) {
+          return first.substring(0, i);
+        }
+      }
+      return first;
 
 }
 
@@ -30,7 +44,7 @@ function longestCommonPrefix(strs){
 
 
 
-  
+
 
 // No cambiar nada debajo de esta línea
 

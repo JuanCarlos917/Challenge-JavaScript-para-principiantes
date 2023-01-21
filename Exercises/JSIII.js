@@ -10,7 +10,7 @@ C             100
 D             500
 M             1000
 Por ejemplo, 2 se escribe como II en números romanos, solo se suman dos unidades.
-12 se escribe como XII, que es simplemente X + II. 
+12 se escribe como XII, que es simplemente X + II.
 El número 27 se escribe como XXVII, que es XX + V + II.
 
 Los números romanos generalmente se escriben de mayor a menor de izquierda a derecha. Sin embargo, el numeral para cuatro no es IIII. En cambio, el número cuatro se escribe como IV. Como el uno está antes que el cinco lo restamos haciendo cuatro. El mismo principio se aplica al número nueve, que se escribe como IX. Hay seis casos en los que se usa la resta:
@@ -46,7 +46,22 @@ Restricciones:
 
 function romanToInt(s) {
 // Tú código acá:
-        
+const numRomano {
+    V: =5,
+    I: =1,
+    L: =50,
+    X: =10,
+    D: =500,
+    C: =100,
+    M: =1000
+   }
+   let result = 0
+    for (let index = 0; index < s.length; index++) {
+        const element = numRomano[s[index]];
+        const next = numRomano[s[index + 1]]
+         return (next > element)? result -= element : result += element
+    }
+    return result
 };
 
 

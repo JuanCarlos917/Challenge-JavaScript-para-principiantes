@@ -14,7 +14,9 @@ se convierte en 121-. Por lo tanto no es un palíndromo.
 
 function isPalindrome(x){
     // Tu código aquí:
-   
+   let palindromo = x.toString().split('').reverse('').join('')
+    return (palindromo == x) ? true : false
+
 }
 
 

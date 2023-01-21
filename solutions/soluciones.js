@@ -32,6 +32,7 @@ function isPalindrome(x) {
 
 
 
+
 /*Solución al ejercicio JS.III - Nivel de dificultad - Easy.
 Roman to Integer*/
 function romanToInt(s) {
